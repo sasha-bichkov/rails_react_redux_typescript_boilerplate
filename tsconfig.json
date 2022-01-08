@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "module": "es6",
+    "moduleResolution": "node",
+    "baseUrl": "./app",
+    "lib": [
+      "dom",
+      "es6",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "jsx": "react",
+    "sourceMap": true,
+    "removeComments": true,
+    "noEmitOnError": true,
+    "strict": true,
+    "typeRoots": [
+      "./node_modules/@types/"
+    ],
+  },
+  "include": [
+    "./app/**/*"
+  ],
+  "exclude": [
+    "public",
+    "build",
+    "node_modules",
+    "./app/**/*.spec.ts",
+    "./app/**/*.spec.tsx",
+    "./app/**/*.spec.js",
+    "./app/**/*.spec.jsx"
+  ],
+  "compileOnSave": false
+}
