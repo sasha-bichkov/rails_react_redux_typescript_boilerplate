@@ -2,6 +2,7 @@
   "name": "rails-react-redux-typescript-boilerplate",
   "private": true,
   "scripts": {
+    "lint": "yarn eslint ./app",
     "csslint": "yarn stylelint \"./app/assets/**/*.scss\"",
     "cssfix": "yarn stylelint --fix \"./app/**/*.scss\""
   },
@@ -20,6 +21,11 @@
     "@types/rails__activestorage": "^7.0.0",
     "@types/rails__ujs": "^6.0.1",
     "@types/turbolinks": "^5.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "fork-ts-checker-webpack-plugin": "^6.5.0",
     "postcss": "^8.4.5",
     "stylelint": "^14.2.0",
