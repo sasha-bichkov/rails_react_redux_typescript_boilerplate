@@ -2,6 +2,7 @@
   "name": "rails-react-redux-typescript-boilerplate",
   "private": true,
   "scripts": {
+    "dev": "./bin/webpack-dev-server",
     "lint": "yarn eslint ./app",
     "test": "yarn jest ./app/javascript --verbose --coverage",
     "csslint": "yarn stylelint \"./app/assets/**/*.scss\"",
