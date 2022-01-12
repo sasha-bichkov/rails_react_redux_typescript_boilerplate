@@ -1,0 +1,69 @@
+.UnsupportedBrowser {
+  text-align: center;
+}
+
+.UnsupportedBrowser__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.UnsupportedBrowser__title {
+  margin: 10px 0;
+  font-size: 2rem;
+
+  @include mq($from: desktop) {
+    margin: 15px 0;
+    font-size: 3rem;
+  }
+}
+
+.UnsupportedBrowser__text {
+  display: inline-block;
+
+  max-width: 540px;
+  margin: 10px 0;
+  font-size: 1.5rem;
+
+  @include mq($from: desktop) {
+    max-width: 740px;
+    font-size: 2rem;
+  }
+}
+
+.UnsupportedBrowser__icon {
+  @include size(250px);
+
+  @include mq($from: desktop) {
+    @include size(300px);
+  }
+}
+
+.BrowserIcon {
+  display: inline-block;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.BrowserIcon__logo {
+  max-width: 100px;
+  max-height: 100px;
+  padding: 10px;
+
+  @include size(100%, auto);
+
+  @include mq($from: desktop) {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+.BrowserIcon__title {
+  font-size: 1rem;
+
+  @include mq($from: desktop) {
+    font-size: 1.5rem;
+  }
+}

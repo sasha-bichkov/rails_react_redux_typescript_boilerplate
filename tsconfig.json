@@ -5,9 +5,9 @@
     "experimentalDecorators": false,
     "allowSyntheticDefaultImports": true,
     "target": "es6",
-    "module": "es6",
+    "module": "esnext",
     "moduleResolution": "node",
-    "baseUrl": "./app",
+    "baseUrl": "./app/frontend",
     "lib": [
       "dom",
       "es6",
@@ -20,8 +20,17 @@
     "noEmitOnError": true,
     "strict": true,
     "typeRoots": [
-      "./node_modules/@types/"
+      "./node_modules/@types/",
+      "./@types/"
     ],
+    "paths": {
+      "*": ["./@types/*"],
+      "@Root/*": ["./*"],
+      "@Pages/*": ["./pages/*"],
+      "@Modules/*": ["./modules/*"],
+      "@Containers/*": ["./containers/*"],
+      "@Components/*": ["./components/*"],
+    },
   },
   "include": [
     "./app/**/*"

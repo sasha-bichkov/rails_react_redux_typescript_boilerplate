@@ -1,7 +1,7 @@
 # Note: You must restart bin/webpack-dev-server for changes to take effect
 
 default: &default
-  source_path: app/frontend
+  source_path: app
   source_entry_path: packs
   public_root_path: public
   public_output_path: packs
@@ -25,7 +25,6 @@ default: &default
     - .gif
     - .tiff
     - .ico
-    - .svg
     - .eot
     - .otf
     - .ttf
@@ -35,7 +34,9 @@ default: &default
   extensions:
     - .mjs
     - .js
+    - .jsx
     - .ts
+    - .tsx
     - .sass
     - .scss
     - .css
