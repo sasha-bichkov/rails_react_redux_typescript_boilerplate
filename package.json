@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "./bin/webpack-dev-server",
     "lint": "yarn eslint ./app",
-    "test": "yarn jest ./app/javascript --verbose --coverage",
+    "test": "yarn jest ./app/frontend --verbose --coverage",
     "csslint": "yarn stylelint \"./app/assets/**/*.scss\"",
     "cssfix": "yarn stylelint --fix \"./app/**/*.scss\""
   },
@@ -42,6 +42,7 @@
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
     "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.4.0",
     "@types/rails__activestorage": "^7.0.0",
