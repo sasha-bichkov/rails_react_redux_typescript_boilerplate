@@ -4,16 +4,10 @@
     "emitDecoratorMetadata": false,
     "experimentalDecorators": false,
     "allowSyntheticDefaultImports": true,
-    "target": "es6",
+    "target": "es2021",
     "module": "esnext",
     "moduleResolution": "node",
     "baseUrl": "./app/frontend",
-    "lib": [
-      "dom",
-      "es6",
-      "dom.iterable",
-      "scripthost"
-    ],
     "jsx": "react",
     "sourceMap": true,
     "removeComments": true,
