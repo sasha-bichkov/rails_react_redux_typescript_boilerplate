@@ -5,7 +5,7 @@ module.exports = {
     '\\.[jt]sx?$': 'babel-jest',
     '\\.svg$': "jest-transformer-svg"
   },
-  coverageReporters: ['html'],
+  coverageReporters: ['text', 'html'],
   coverageDirectory: '<rootDir>/jest-coverage/',
   moduleNameMapper: {
     '^@Root/(.*)$': '<rootDir>/app/frontend/frontend/$1',
