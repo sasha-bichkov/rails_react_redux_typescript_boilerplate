@@ -1,0 +1,78 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker files
+Dockerfile
+docker-sync.yml
+docker-compose.yml
+
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+# Ignore all logfiles and tempfiles.
+/logs/*
+/tmp/*
+!/logs/.keep
+!/tmp/.keep
+
+# Ignore node_modules
+node_modules/
+
+# Ignore precompiled javascript packs
+/public/packs
+/public/packs-test
+/public/assets
+
+# Ignore yarn files
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# nvmrc
+.nvmrc
+
+# Ignore uploaded files in development
+/storage/*
+!/storage/.keep
+
+# Rails
+*.rbc
+capybara-*.html
+.rspec
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/system
+/coverage/
+/spec/tmp
+
+# Ruby
+*.gem
+/.config
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+.ruby-version
+.rvmrc
+
+# Mac OSx files
+.DS_Store
+._.DS_Store
+
+# Markdown
+*.md
+
+# Others
+.cache

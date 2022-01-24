@@ -1,0 +1,36 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  web:
+    build: .
+    command: ['bin/rails', 's', '-p', '3000', '-b', '0.0.0.0']
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - rails-react-redux-typescipt-boilerplate-sync:/app:nocopy
+      - gem_cache:/app/vendor/bundle
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+
+  webpack:
+    build: .
+    ports:
+      - 3035:3035
+    volumes:
+      - rails-react-redux-typescipt-boilerplate-sync:/app:nocopy
+      - gem_cache:/app/vendor/bundle
+    command: ['bin/webpack-dev-server']
+
+volumes:
+  gem_cache:
+  rails-react-redux-typescipt-boilerplate-sync:
+    external: true
