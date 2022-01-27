@@ -19,7 +19,6 @@ class Home extends React.Component<HomeProps, HomeState> {
     return (
       <div>
         <h1>{t('home.title')}</h1>
-
         <OmniAuthButton Icon={GoogleIcon} onClick={() => console.log('click')}>
           Sign in with Google
         </OmniAuthButton>
