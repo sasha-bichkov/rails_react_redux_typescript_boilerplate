@@ -4,13 +4,16 @@ import { withTranslation, TFunction } from 'react-i18next'
 import OmniAuthButton from '@Components/OmniAuthButton'
 import GoogleIcon from '@Images/OmniAuthButton/GoogleLogo.svg'
 
+import SignUp from '@Root/containers/SignUp'
+
 import './Home.scss'
 
 interface HomeProps {
   t: TFunction<('translation' | 'common')[], undefined>
 }
 
-interface HomeState {} // eslint-disable-line @typescript-eslint/no-empty-interface
+interface HomeState {
+} // eslint-disable-line @typescript-eslint/no-empty-interface
 
 class Home extends React.Component<HomeProps, HomeState> {
   render() {
@@ -22,6 +25,7 @@ class Home extends React.Component<HomeProps, HomeState> {
         <OmniAuthButton Icon={GoogleIcon} onClick={() => console.log('click')}>
           Sign in with Google
         </OmniAuthButton>
+        <SignUp />
       </div>
     )
   }
