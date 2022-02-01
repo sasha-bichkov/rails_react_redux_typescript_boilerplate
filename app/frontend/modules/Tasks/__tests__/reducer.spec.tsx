@@ -4,7 +4,7 @@ import { initialState } from '../../User/reducer'
 import { tasksReducer } from '../reducer'
 import { render, screen } from '@testing-library/react'
 import { Provider } from 'react-redux'
-import CreatingTasksForm from '../../../containers/TasksFormContainer'
+import CreatingTasksForm from '../../../containers/TasksForm'
 import userEvent from '@testing-library/user-event'
 import store from '../../../configureStore'
 

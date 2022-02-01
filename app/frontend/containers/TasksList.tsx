@@ -5,16 +5,16 @@ import { connect, useDispatch, useSelector } from "react-redux";
 import { IApplicationState } from "@Root/rootReducer";
 import CreateTasksList from "@Components/CreatingTasksList/CreatingTasksList";
 import { deleteTask } from "@Modules/Tasks/actions";
-import { ITaskId } from "@Modules/Tasks/types";
+import { ITask } from "@Modules/Tasks/types";
 
 const TasksList: FC = () => {
   const dispatch = useDispatch()
   const tasks = useSelector((state: IApplicationState) => state.tasks)
-  const deleteTaskAction = (id:ITaskId) => {
-    dispatch(deleteTask(id))
+  const deleteTaskAction = (task: ITask) => {
+    dispatch(deleteTask(task))
   }
   return (
-    <CreateTasksList tasks={tasks} deleteTaskAction={deleteTaskAction}/>
+    <CreateTasksList tasks={tasks} deleteTaskAction={deleteTaskAction} />
   )
 }
 

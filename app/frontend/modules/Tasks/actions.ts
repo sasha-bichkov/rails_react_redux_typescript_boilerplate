@@ -10,7 +10,7 @@ export const addNewTask = (payload: ITask) => {
   }
 }
 
-export const deleteTask = (payload: ITaskId) => {
+export const deleteTask = (payload: ITask) => {
   return {
     type: TasksActionTypes.DELETE_TASK,
     payload

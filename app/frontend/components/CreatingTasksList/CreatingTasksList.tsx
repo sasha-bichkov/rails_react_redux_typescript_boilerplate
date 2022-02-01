@@ -1,28 +1,36 @@
 import React, { FC } from "react"
+import { FaRegTrashAlt } from 'react-icons/fa'
+
 import { ITaskState } from "@Modules/Tasks/reducer";
-import { ITask, ITaskId } from "@Modules/Tasks/types";
+import { ITask } from "@Modules/Tasks/types";
+
+import './CreatingTasksList.scss'
 
 interface TasksProps {
   tasks: ITaskState
 
-  deleteTaskAction(id:ITaskId): void
+  deleteTaskAction(task: ITask): void
 }
 
 const CreateTasksList: FC<TasksProps> = (props) => {
   const { tasks } = props.tasks
-  // @ts-ignore
-  const sendId = (e) => {
-    const id = e.target.getAttribute('data-id')
-    props.deleteTaskAction(id)
-  }
-  const RenderTask = (task: ITask) => {
-    return <div key={task.id}>
-      <p>{task.title}</p>
-      <p>{task.text}</p>
-      <button type='button' data-id={task.id} onClick={sendId}>
-        delete
-      </button>
-    </div>
+  const renderTask = (task: ITask) => {
+    return (
+      <form className="TasksList__form" key={task.id}>
+        <div className="TasksList__content">
+          <p className="TasksList__title">{task.title}</p>
+          <p className="TasksList__text">{task.text}</p>
+        </div>
+        <button
+          className="TasksList__button button-delete"
+          type='button'
+          onClick={() => {
+            props.deleteTaskAction(task)
+          }}>
+          <FaRegTrashAlt />
+        </button>
+      </form>
+    )
   }
 
   return (
@@ -30,7 +38,7 @@ const CreateTasksList: FC<TasksProps> = (props) => {
       <h1>Tasks</h1>
       {
         tasks && tasks.map(task => {
-          return RenderTask(task)
+          return renderTask(task)
         })
       }
     </div>

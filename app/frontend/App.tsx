@@ -17,7 +17,6 @@ const Home = React.lazy(() => import('@Pages/Home'))
 const NotFound = React.lazy(() => import('@Pages/NotFound'))
 const Issues = React.lazy(() => import('@Pages/Issues'))
 const Backlog = React.lazy(() => import('@Pages/Backlog'))
-// const Tasks = React.lazy(() => import('@Pages/Tasks'))
 
 import '@Root/i18n'
 import '@Scss/App.scss'
@@ -43,7 +42,6 @@ class App extends React.Component {
                     <Route path="/" element={<Home />} />
                     <Route path="/issues" element={<Issues />} />
                     <Route path="/backlog" element={<Backlog />} />
-                    {/*<Route path="/tasks" element={<Tasks />} />*/}
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </React.Suspense>

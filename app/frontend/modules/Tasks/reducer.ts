@@ -21,13 +21,13 @@ export const tasksReducer = (
         draft.tasks.push(action.payload as ITask)
         break
       case TasksActionTypes.DELETE_TASK_SUCCESS:
-         draft.tasks = draft.tasks.filter(
-          (item) => {
-            // @ts-ignore
-            return item.id !== action.payload
-          }
-        )
-        // draft.tasks.pop()
+        if(action.payload) {
+          draft.tasks = draft.tasks.filter(
+            (item) => {
+              return item.id !== action.payload!.id
+            }
+          )
+        }
         break
 
       default:

@@ -5,9 +5,10 @@ import OmniAuthButton from '@Components/OmniAuthButton'
 import GoogleIcon from '@Images/OmniAuthButton/GoogleLogo.svg'
 import SignUp from '@Root/containers/SignUp'
 
-import './Home.scss'
-import TasksFormContainer from '@Root/containers/TasksFormContainer'
+import TasksForm from '@Root/containers/TasksForm'
 import TasksList from "@Root/containers/TasksList";
+
+import './Home.scss'
 
 interface HomeProps {
   t: TFunction<('translation' | 'common')[], undefined>
@@ -22,7 +23,7 @@ class Home extends React.Component<HomeProps, HomeState> {
     return (
       <div>
         <h1>{t('home.title')}</h1>
-        <TasksFormContainer />
+        <TasksForm />
         <TasksList />
       </div>
     )

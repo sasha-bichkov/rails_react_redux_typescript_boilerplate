@@ -12,7 +12,7 @@ interface ITasksFromContainerProps {
   addNewTask(payload: ITask): void
 }
 
-const TasksFormContainer: FC<ITasksFromContainerProps> = props => {
+const TasksForm: FC<ITasksFromContainerProps> = props => {
   return (
     <CreatingTasksForm addNewTask={props.addNewTask} />
   )
@@ -28,4 +28,4 @@ function mapDispatchToProps(dispatch: Dispatch<Action>) {
   }, dispatch)
 }
 
-export default withTranslation()(connect(mapStateToProps, mapDispatchToProps)(TasksFormContainer))
+export default withTranslation()(connect(mapStateToProps, mapDispatchToProps)(TasksForm))
