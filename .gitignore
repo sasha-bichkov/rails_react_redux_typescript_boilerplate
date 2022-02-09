@@ -43,5 +43,6 @@ yarn-debug.log*
 .idea
 jest-coverage
 .docker-sync
+
 .DS_Store
 ._.DS_Store

@@ -4,7 +4,7 @@ import { withTranslation, TFunction } from 'react-i18next'
 import OmniAuthButton from '@Components/OmniAuthButton'
 import GoogleIcon from '@Images/OmniAuthButton/GoogleLogo.svg'
 
-import SignUp from '@Root/containers/SignUp'
+import SignUp from '@Containers/SignUp'
 
 import './Home.scss'
 
@@ -12,8 +12,7 @@ interface HomeProps {
   t: TFunction<('translation' | 'common')[], undefined>
 }
 
-interface HomeState {
-} // eslint-disable-line @typescript-eslint/no-empty-interface
+interface HomeState {} // eslint-disable-line @typescript-eslint/no-empty-interface
 
 class Home extends React.Component<HomeProps, HomeState> {
   render() {

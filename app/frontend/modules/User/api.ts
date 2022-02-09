@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios from 'axios'
 
-import { IUserRegister } from "@Modules/User/types";
-import getMetaValue from "@Root/utils/GetMetaValue/GetMetaValue";
-import { convertToSnakeCase } from "@Root/utils/convertToSnakeCase/convertToSnakeCase";
+import { IUserRegister } from '@Modules/User/types'
+import getMetaValue from '@Root/utils/GetMetaValue/GetMetaValue'
+import { convertToSnakeCase } from '@Root/utils/convertToSnakeCase/convertToSnakeCase'
 
 const apiHeaders = {
   headers: {
@@ -12,7 +12,5 @@ const apiHeaders = {
 }
 
 export function register(user: IUserRegister) {
-  // @ts-ignore
-  const resp = axios.post('/api/v1/users', convertToSnakeCase(user), apiHeaders);
-  return resp
+  return axios.post('/api/v1/users', convertToSnakeCase(user), apiHeaders)
 }

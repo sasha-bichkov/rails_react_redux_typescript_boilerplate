@@ -2,9 +2,7 @@ import React, { FC } from 'react'
 
 import './Issues.scss'
 
-
 const Issues: FC = () => {
-
   return (
     <div>
       <h1>Issues</h1>

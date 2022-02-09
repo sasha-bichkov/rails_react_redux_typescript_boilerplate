@@ -1,12 +1,12 @@
-import React, { FC } from "react";
-import { registerNewUser } from "@Modules/User/actions";
-import { IApplicationState } from "@Root/rootReducer";
-import { Action, bindActionCreators, Dispatch } from "redux";
-import { connect } from "react-redux";
-import { withTranslation } from "react-i18next";
+import React, { FC } from 'react'
+import { Action, bindActionCreators, Dispatch } from 'redux'
+import { connect } from 'react-redux'
+import { withTranslation } from 'react-i18next'
 
-import SignUpForm from "@Components/SingUpForm";
-import { IUserRegister } from "@Modules/User/types";
+import { registerNewUser } from '@Modules/User/actions'
+import { IApplicationState } from '@Root/rootReducer'
+import SignUpForm from '@Components/SingUpForm'
+import { IUserRegister } from '@Modules/User/types'
 
 interface ISignUpFormContainerProps {
   registerNewUser(payload: IUserRegister): void
@@ -18,6 +18,7 @@ const SignUpFormContainer: FC<ISignUpFormContainerProps> = props => {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function mapStateToProps(state: IApplicationState) {
   return {}
 }

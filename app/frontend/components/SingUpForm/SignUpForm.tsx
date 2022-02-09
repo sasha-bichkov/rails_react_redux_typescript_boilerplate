@@ -27,9 +27,6 @@ const SignUpForm: FC<ISignUpForm> = props => {
   } = useForm<IForm>({mode: 'all'})
   const password = useRef({})
   password.current = watch('password')
-  const sleep = (milliseconds: number) => {
-    return new Promise(resolve => setTimeout(resolve, milliseconds))
-  }
 
   const onSubmit: SubmitHandler<IForm> = async (data) => {
     props.onSubmit(data)

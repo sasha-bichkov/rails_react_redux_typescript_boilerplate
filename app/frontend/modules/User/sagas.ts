@@ -1,4 +1,3 @@
-import { IApplicationState } from '@Root/rootReducer'
 import { SagaIterator } from 'redux-saga'
 import { call, put, takeLatest } from 'redux-saga/effects'
 import { IAction } from '@Root/types'
@@ -9,8 +8,9 @@ import * as API from './api'
 
 function* registerUser(action: Required<IAction<IUserRegister>>): SagaIterator {
   try {
-    const { email, password, passwordConfirmation } = action.payload
-    const resp = yield call(API.register, action.payload)
+    const { email } = action.payload
+    // const response = yield call(API.register, action.payload)
+    yield call(API.register, action.payload)
     // const result = yield call(isEmailDisposable, email)
     // const result = yield call()
     // if (result) {
