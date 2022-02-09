@@ -76,3 +76,5 @@ capybara-*.html
 
 # Others
 .cache
+.vscode
+.idea
