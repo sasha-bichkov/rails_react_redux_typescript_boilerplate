@@ -9,7 +9,7 @@ services:
 
   web:
     build: .
-    command: ['bin/rails', 's', '-p', '3000', '-b', '0.0.0.0']
+    command: sh -c "rm -f /app/tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -28,7 +28,7 @@ services:
     volumes:
       - rails-react-redux-typescipt-boilerplate-sync:/app:nocopy
       - gem_cache:/app/vendor/bundle
-    command: ['bin/webpack-dev-server']
+    command: [ 'bin/webpack-dev-server' ]
 
 volumes:
   gem_cache:

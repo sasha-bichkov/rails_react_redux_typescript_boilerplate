@@ -3,6 +3,8 @@ import FocusLock from 'react-focus-lock'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
 import Button from '@Components/Button'
+import { IUserRegister } from '@Modules/User/types'
+
 import './SingUpForm.scss'
 
 interface IForm {
@@ -12,7 +14,7 @@ interface IForm {
 }
 
 interface ISignUpForm {
-  onSubmit(): void
+  onSubmit(payload: IUserRegister): void
 }
 
 const SignUpForm: FC<ISignUpForm> = props => {
@@ -25,14 +27,9 @@ const SignUpForm: FC<ISignUpForm> = props => {
   } = useForm<IForm>({mode: 'all'})
   const password = useRef({})
   password.current = watch('password')
-  const sleep = (milliseconds: number) => {
-    return new Promise(resolve => setTimeout(resolve, milliseconds))
-  }
 
   const onSubmit: SubmitHandler<IForm> = async (data) => {
-    console.log('sent:', data)
-    props.onSubmit()
-    await sleep(3000)
+    props.onSubmit(data)
     reset()
   }
 

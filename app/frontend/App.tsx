@@ -1,6 +1,5 @@
 import React from 'react'
 import { compose } from 'redux'
-import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ErrorBoundary } from 'react-error-boundary'

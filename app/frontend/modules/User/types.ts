@@ -1,6 +1,14 @@
-export const UserActions = {
-  REIGSTER: '@@user/REGISTER',
-  REIGSTER_SUCCESS: '@@user/REGISTER_SUCCESS'
+export const UserActionTypes = {
+  REGISTER: '@@user/REGISTER',
+  REGISTER_SUCCESS: '@@user/REGISTER_SUCCESS'
 }
 
-export interface IUser {}
+export interface IUser {
+  readonly email: string
+}
+
+export interface IUserRegister {
+  readonly email: string
+  readonly password: string
+  readonly passwordConfirmation: string
+}

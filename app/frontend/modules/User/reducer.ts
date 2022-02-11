@@ -1,20 +1,30 @@
 import produce, { Draft } from 'immer'
-
 import { IAction } from '@Root/types'
+import { IUser, UserActionTypes } from '@Modules/User/types'
 
-import { IUser } from './types'
+export const initialState: IUser = {
+  email: ''
+}
 
-export const initialState: IUser = {}
-
-const userReducer = (
+export const userReducer = (
   state: IUser = initialState,
-  action: IAction
+  action: IAction,
 ): IUser => {
   return produce(state, draft => {
     switch (action.type) {
-      default: return state
+    case UserActionTypes.REGISTER_SUCCESS: {
+      updateEmail(draft, action)
+      break
+    }
+
+    default:
+      break
     }
   })
 }
 
-export default userReducer
+const updateEmail = (draft: Draft<IUser>, action: IAction) => {
+  if (!action.payload) { return }
+
+  draft.email = action.payload.email as string
+}

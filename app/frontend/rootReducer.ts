@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-import userReducer from '@Modules/User/reducer'
+import { userReducer } from '@Modules/User/reducer'
 import { IUser } from '@Modules/User/types'
 
 export interface IApplicationState {

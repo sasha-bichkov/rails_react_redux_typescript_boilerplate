@@ -40,7 +40,9 @@ yarn-debug.log*
 .yarn-integrity
 
 .vscode
+.idea
 jest-coverage
 .docker-sync
+
 .DS_Store
 ._.DS_Store

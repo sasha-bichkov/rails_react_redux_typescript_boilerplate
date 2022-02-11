@@ -13,6 +13,7 @@
     "removeComments": true,
     "noEmitOnError": true,
     "strict": true,
+    "lib": ["es2015"],
     "typeRoots": [
       "./node_modules/@types/",
       "./@types/"
