@@ -22,7 +22,7 @@ RUN apk add --virtual build-dependencies build-base && apk add postgresql-dev tz
 WORKDIR /app
 COPY . /app
 
-# We need it to chache our gems in vendor/bundle
+# We need it to cache our gems in vendor/bundle
 RUN gem install bundler:2.2.33 \
   && bundle config set path ./vendor/bundle \
   && bundle install
